@@ -26,7 +26,7 @@ Beginning with version 1.0.7, Photon offers an API allowing third-party tweaks t
       } completion:nil];
   });
   
-  // Register for 'Show Photon' notification
+  // Register for 'Show Photon without animation' notification
   int notify_token2;
   notify_register_dispatch("com.cemck.photon/startAmbientDisplay.noAnimation", &notify_token2, dispatch_get_main_queue(), ^(int token) {
       // Set your values
