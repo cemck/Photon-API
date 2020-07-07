@@ -26,9 +26,16 @@ Beginning with version 1.0.7, Photon offers an API allowing third-party tweaks t
       } completion:nil];
   });
   
-  // Register for 'Hide Photon' notification
+  // Register for 'Show Photon' notification
   int notify_token2;
-  notify_register_dispatch("com.cemck.photon/stopAmbientDisplay", &notify_token2, dispatch_get_main_queue(), ^(int token) {
+  notify_register_dispatch("com.cemck.photon/startAmbientDisplay.noAnimation", &notify_token2, dispatch_get_main_queue(), ^(int token) {
+      // Set your values
+      self.view.alpha = 1; // Show/Hide your view
+  });
+  
+  // Register for 'Hide Photon' notification
+  int notify_token3;
+  notify_register_dispatch("com.cemck.photon/stopAmbientDisplay", &notify_token3, dispatch_get_main_queue(), ^(int token) {
       // Set your values animated
       [UIView animateWithDuration:0.9 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
           self.view.alpha = 1; // Show/Hide your view
