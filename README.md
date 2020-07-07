@@ -1,6 +1,6 @@
 # Photon API
 
-Beginning with version 1.0.7, Photon offers an API allowing third-party tweaks to listen for Photon Ambient Display state changes. Please make sure to include all 3 notifications.
+Beginning with version 1.0.7, Photon offers an API allowing third-party tweaks to listen for Photon Ambient Display state changes. Please make sure to use all 3 notifications.
 
 **Header.h**
 ```objc
